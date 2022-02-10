@@ -11,7 +11,7 @@ if (weatherForm) {
     messageTwo.textContent = '';
 
     if (location.trim().length > 0) {
-      fetch('http://localhost:5000/weather?address=' + location)
+      fetch('/weather?address=' + location)
         .then((response) => response.json())
         .then((data) => {
           if (data.error) {
